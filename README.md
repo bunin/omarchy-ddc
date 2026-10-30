@@ -15,16 +15,14 @@ Hyprland and Linux.
 ## Why
 
 A laptop's own screen has a backlight the OS controls. An external monitor
-does not: its brightness and volume live inside the monitor, behind fiddly
-buttons. Most monitors accept the same settings over the video cable through
+keeps its brightness and volume inside itself, behind fiddly buttons. Most monitors accept the same settings over the video cable through
 [DDC/CI](https://en.wikipedia.org/wiki/Display_Data_Channel), which
-[ddcutil](https://www.ddcutil.com) speaks, and Omarchy already ships ddcutil.
+[ddcutil](https://www.ddcutil.com) speaks, and Omarchy already includes ddcutil.
 This plugin puts it one click away.
 
-Speaker volume is the one people miss most: with sound going to the monitor
+Speaker volume is the one people miss most. When sound goes to the monitor
 over HDMI or DisplayPort, the volume slider in Omarchy's Audio panel changes
-the level of the signal, while the monitor's own speaker volume stays where it
-was. The SPEAKERS slider here changes the monitor's side.
+the level of the signal. The monitor's own speaker volume stays where it was. The SPEAKERS slider here changes the monitor's side.
 
 ## Features
 
@@ -39,7 +37,7 @@ was. The SPEAKERS slider here changes the monitor's side.
 - Marks the monitor your sound is playing on as AUDIO OUTPUT.
 - Scroll on the bar icon to change the focused monitor's brightness, with
   Omarchy's brightness OSD. `h`/`l` do the same inside the panel.
-- Each control shows only if the monitor advertises it, so a monitor without
+- Each control shows only if the monitor advertises it. A monitor without
   speakers has no SPEAKERS slider.
 - Finds monitors by their video connector (HDMI-A-1, DP-2), so two identical
   monitors are told apart, and re-scans when one is plugged in or out.
@@ -82,7 +80,7 @@ ddcutil --bus 3 getvcp 10 12 62 --brief # brightness, contrast, volume
 - **An input shows as 0x…:** a code outside the MCCS standard. Open an issue
   with the monitor model and the `ddcutil capabilities` output.
 - **Slow sliders:** each DDC/CI read or write takes about half a second. The
-  plugin sends only the latest position, so a drag never queues up.
+  plugin sends only the latest position. A drag never queues up.
 
 Tested on a Dell S2722QC over HDMI with an NVIDIA card. DisplayPort
 multi-stream (daisy chains), docks and laptops are untested, and reports are
