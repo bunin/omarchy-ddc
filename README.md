@@ -54,6 +54,8 @@ The icon (a monitor with a dashboard on its screen, 󰨇) appears in the bar onc
 a DDC/CI monitor is found. It pairs well with Omarchy's own Display widget, so
 put it next to that one. Move it with a drag or `omarchy bar move bunin.ddc --section right`.
 
+Remove it with `omarchy plugin remove bunin.ddc`.
+
 Requirements, all present on a stock Omarchy install:
 
 - ddcutil 2.x or later (in `omarchy-base`). Its udev rule gives the
