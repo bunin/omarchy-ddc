@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "bunin.ddc",
+  "name": "Monitor Control (DDC/CI)",
+  "version": "0.1.0",
+  "author": "bunin",
+  "description": "Brightness, contrast, speaker volume, input source, picture mode and power for external monitors",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Monitor Control",
+    "description": "Brightness, contrast, speaker volume, input source, picture mode and power for external monitors",
+    "category": "System",
+    "allowMultiple": false
+  }
+}
